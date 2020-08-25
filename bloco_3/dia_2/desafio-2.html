@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project: Travel webpage</title>
+    
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                background-color: rgb(159, 191, 191);
+                padding: .5rem;
+                padding-left: 1.5rem;
+            }
+            h1 {
+                margin-bottom: 0;
+                font-family: sans-serif;
+                color: white;
+                text-shadow: 5px 5px 6px rgba(0, 0, 0, .2);
+            }
+            header p {
+                margin-top: 0;
+                font-family: sans-serif;
+                font-style: italic;
+                
+            }
+            nav ul.menu{
+                list-style: none;
+                text-align: center;
+            }
+            nav ul.menu a{
+                color: black;
+                text-transform: uppercase;
+            }
+            nav ul.menu a li{
+                display: inline;
+                padding-right: 1rem;
+                transition: .2s;
+            }
+             nav ul.menu a li:hover {
+                color: rgba(0, 0, 0, .5);
+            }
+            .countainer {
+                text-align: center;
+            }
+            .sub-title {
+                font-family: sans;
+                text-transform: uppercase;
+                text-align: center;
+                background-color: rgb(159, 191, 191);
+                padding: 10px;
+                border-radius: 5rem .5rem;
+            }
+            .countainer p {
+                font-family: sans;
+                letter-spacing: 1.3px;
+                text-align: justify;
+                padding: .5rem 2rem;
+            }
+            div#packages ul {
+                list-style: none;
+            }
+            div#packages ul li {
+                font-family: sans;
+                padding: 10px;
+                color: black;
+                border: 10px solid rgba(159, 191, 191, .5);
+                width: 800px;
+                margin: auto;
+                margin-top: 100px;
+            }
+            div#packages ul li img {
+                width: 800px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Travel to far</h1>
+            <p>Always taking you to the destination you want.</p>
+            <nav>
+                <ul class="menu">
+                    <a href="#about"><li>About</li></a>
+                    <a href="#packages"><li>Packages</li></a>
+                    <a href="#social_media"><li>Social Media</li></a>
+                </ul>
+            </nav>
+        </header>
+        <div class="countainer" id="about">
+            <h2 class="sub-title">about</h2>
+            <p>
+                Considered the best travel company for 10 consecutive years.
+Winner of the "flies flies too far" award.
+And today we are very proud to announce the purchase of "flies close" that will add us to this current moment.
+            </p>
+        </div>
+        <div class="countainer" id="packages">
+            <h2 class="sub-title">packages</h2>
+            <p>our current travel packages are:</p>
+            <ul>
+                <li>Brazil - Rio de Janeiro<img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Praia_de_Copacabana_-_Rio_de_Janeiro%2C_Brasil.jpg" alt="Copacabana, Rio de Janeiro, Brazil"></li>
+                
+                <li>Canada - Toronto<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Pollobarca-15051912-2cr_%2817509453180%29.jpg/1200px-Pollobarca-15051912-2cr_%2817509453180%29.jpg" alt="Toronto, Canada"></li>
+                
+                <li>USA - California<img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Santa_Monica_State_Beach_P4060277.jpg" alt="Santa Monica State Beach, California, USA"></li>
+                
+            </ul>
+        </div>
+    </body>
+</html>
