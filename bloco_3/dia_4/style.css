@@ -3,3 +3,38 @@
     margin: 0;
     padding: 0;
 }
+h1, h2, h3{
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+header{
+    background-color: #576490;
+    padding: 80px;
+}
+header h1{
+    color: #C9CAD9;
+}
+/* MENU */
+nav{
+    background-color: #576490;
+}
+ul{
+    text-align: right;
+}
+li{
+    display: inline-block;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+nav a{
+    font-family: 'Ubuntu', sans-serif;
+    color: #C9CAD9;
+    transition: .2s;
+}
+nav a:hover{
+    color: #A3BCF9;
+}
+/* END MENU */
+p{
+    font-family: 'Noto Sans JP', sans-serif;
+}
