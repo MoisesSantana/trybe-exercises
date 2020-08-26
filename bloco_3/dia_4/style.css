@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Ubuntu+Mono&family=Ubuntu:wght@700&display=swap');
+/* DEFAULT */
 *{
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: #d1d2f9;
+}
 h1, h2, h3{
     font-family: 'Ubuntu Mono', monospace;
 }
-
+p{
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: justify;
+}
+/* END DEFAULT */
+/* HEADER */
 header{
     background-color: #576490;
     padding: 80px;
@@ -14,9 +23,11 @@ header{
 header h1{
     color: #C9CAD9;
 }
+/* END HEADER */
 /* MENU */
 nav{
     background-color: #576490;
+    margin-bottom: 50px;
 }
 ul{
     text-align: right;
@@ -35,6 +46,20 @@ nav a:hover{
     color: #A3BCF9;
 }
 /* END MENU */
-p{
-    font-family: 'Noto Sans JP', sans-serif;
+/* ARTICLE */
+article{
+    background-color: #c9cad9;
+}
+article h2{
+    text-align: center;
+    text-decoration: underline overline;
+    padding: 20px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, .2);
+}
+/* MAIN SECTION */
+section.main{
+    background-color: #A3BCF9;
+    width: 800px;
+    margin: auto;
+    padding: 30px;
 }
