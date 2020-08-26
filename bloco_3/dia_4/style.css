@@ -68,6 +68,8 @@ section.main{
 table{
     border: 2px solid #576490;
     width: 300px;
+    float: left;
+    margin-right: 10px;
 }
 .comum{
     padding: 5px;
@@ -141,13 +143,13 @@ address a{
 /* FOOTER */
 footer{
     background-color: #576490;
-    padding: 100px;
+    padding: 75px;
     text-align: center;
 }
 footer h4{
     font-family: 'Montserrat', sans-serif;
     color: #d1d2f9;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 footer address a{
     font-family: 'Gloria Hallelujah', cursive;
