@@ -9,3 +9,4 @@ for ( let i = 1; i < numbers.length; i += 1) { // Começa no valor 9 - valor 3 a
     }
   }
 }
+console.log(numbers);
