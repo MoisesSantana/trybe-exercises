@@ -1,4 +1,4 @@
-const n = 5;
+const n = 7;
 let linha = '';
 let nLinhas = Math.round(n / 2);
 let contEspacos = Math.floor(n / 2);

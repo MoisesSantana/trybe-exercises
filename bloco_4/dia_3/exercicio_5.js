@@ -1,4 +1,4 @@
-const n = 7;
+const n = 13;
 let linha = '';
 let nLinha = Math.round(n / 2); // numero de linhas impressas
 let mvDireita = Math.round(n / 2 + 1); // movimento para direita
