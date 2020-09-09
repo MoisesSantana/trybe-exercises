@@ -63,7 +63,11 @@
 
       let mainContent = document.createElement('div');
       document.body.appendChild(mainContent);
-      mainContent.className('main-content');
+      mainContent.className = 'main-content';
+
+      let centerContent = document.createElement('div');
+      mainContent.appendChild(centerContent);
+      centerContent.className = 'center-content';
     </script>
   </body>
 </html>
