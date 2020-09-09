@@ -69,9 +69,13 @@
 
  /*Crie uma função que modifique todo o texto da tag <p> para maiúsculo.*/
       
-      for (let i = 0; i < paragraph.length; i += 1) {
-        paragraph[i].style.textTransform = 'uppercase'; 
+      for (let i in paragraph - 1) {
+        paragraph[i].style.textTransform = 'uppercase';
       }
+
+      // for (let i = 0; i < paragraph.length; i += 1) {
+      //   paragraph[i].style.textTransform = 'uppercase'; 
+      // }
 
  /*Crie uma função que exiba o conteúdo de todas as tags <p> no console.*/
 
