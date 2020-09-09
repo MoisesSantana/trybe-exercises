@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Exercício 5.2</title>
+  <style>
+    div {
+      border-color: black;
+      border-style: solid;
+    }
+    
+    .title {
+      text-align: center;
+    }
+    
+    .main-content {
+      background-color: yellow;
+    }
+    
+    .main-content .center-content {
+      background-color: red;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .main-content .center-content p {
+      font-style: italic;
+    }
+    
+    .main-content .left-content {
+      background-color: green;
+      width: 60%;
+      margin-left: 0;
+      margin-right: auto;
+    }
+    
+    .main-content .left-content .small-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 100%;
+    }
+    
+    .main-content .right-content {
+      background-color: blue;
+      width: 60%;
+      margin-left: auto;
+      margin-right: 0;
+    }
+    
+    .main-content .description {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    
+    // #1
+    
+    let title = document.createElement('h1');
+    document.body.appendChild(title);
+    title.innerText = 'Exercício 5.2 - JavaScript DOM';
+    
+    // #2
+    
+    let mainContent = document.createElement('div');
+    document.body.appendChild(mainContent);
+    mainContent.className = 'main-content';
+    
+    // #3
+    
+    let centerContent = document.createElement('div');
+    mainContent.appendChild(centerContent);
+    centerContent.className = 'center-content';
+    
+    // #4
+    
+    let paragraph = document.createElement('p');
+    centerContent.appendChild(paragraph);
+    paragraph.innerText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!';
+    
+    // #5
+    
+    let leftContent = document.createElement('div');
+    mainContent.appendChild(leftContent);
+    leftContent.className = 'left-content';
+    
+    // #6
+    
+    let rightContent = document.createElement('div');
+    mainContent.appendChild(rightContent);
+    rightContent.className = 'right-content';
+    
+    // #7
+    
+    let smallImage = document.createElement('img');
+    leftContent.appendChild(smallImage);
+    smallImage.className = 'small-image';
+    smallImage.src = 'https://picsum.photos/200';
+    
+    // #8
+    
+    let rightListItem = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+    
+    let rightUList = document.createElement('ul');
+    rightContent.appendChild(rightUList);
+    
+    for (let i = 0; i < rightListItem.length; i += 1) {
+      let item = document.createElement('li');
+      let contentItem = rightListItem[i];
+      item.innerText = contentItem;
+      
+      rightUList.appendChild(item)
+    }
+
+    // #9
+
+    for (let i = 1; i <= 3; i += 1) {
+      let subTitles = document.createElement('h3');
+
+      mainContent.appendChild(subTitles);
+      subTitles.innerText = `olá ${i}`;
+    }
+
+    // #B1
+
+    title.className = 'title';
+
+    // #B2
+
+    for (let i = 0; i < document.querySelectorAll('h3').length; i += 1) {
+      document.querySelectorAll('h3')[i].className = 'description';
+    }
+
+    // #B3
+
+    mainContent.removeChild(leftContent);
+
+    // #B4
+
+    rightContent.style.margin = 'auto';
+
+    // #B5
+
+    centerContent.parentNode.style.backgroundColor = 'rgb(0 , 128 , 0)';
+
+    // #B6
+
+    for (i = 1; i <= 2; i += 1) {
+      rightUList.removeChild(rightUList.lastChild);
+    }
+    
+  </script>
+</body>
+</html>
