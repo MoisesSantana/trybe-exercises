@@ -12,30 +12,33 @@
     let image = document.querySelector('img');
     let aux = 0;
     image.style.marginLeft = '0px';
+    
+    let move = setInterval(decise, 50);
 
-    
-    
     function catWalkFront() {
       if(parseInt(image.style.marginLeft) >= window.innerWidth - image.offsetWidth) {
         aux = 1;
       }
       image.style.marginLeft = parseInt(image.style.marginLeft) + 50 + 'px'; 
     }
-
+    
     function catWalkBack() {
       image.style.marginLeft = parseInt(image.style.marginLeft) - 50 + 'px';
-      if(parseInt(image.style.marginLeft) <= 0) {
-        aux = 0;
+      if(parseInt(image.style.marginLeft) <= window.innerWidth / 2 - image.offsetWidth / 2) {
+        clearInterval(move);
+        catDance();        
       }
     }
 
-
-    function decise(){
-      aux == 1 ? catWalkBack() : catWalkFront(); 
+    function catDance() {
+      let end = document.body.createElement('h1');
+      image.src = 'https://media1.tenor.com/images/5f8b813bdbf9d17122a388ae5db98aa5/tenor.gif?itemid=14151263';
     }
-    
-    setInterval(decise, 50);
-
-  </script>
-</body>
-</html>
+      function decise(){
+        aux == 1 ? catWalkBack() : catWalkFront(); 
+      }
+      
+      
+    </script>
+  </body>
+  </html>
