@@ -10,18 +10,32 @@
   
   <script>
     let image = document.querySelector('img');
+    let aux = 0;
     image.style.marginLeft = '0px';
+
     
-    setInterval(catWalk, 50);
     
-    function catWalk() {
-      image.style.marginLeft = parseInt(image.style.marginLeft) + 50 + 'px';
-      if (parseInt(image.style.marginLeft) >= window.innerWidth) {
-        image.style.marginLeft = '0px';   
+    function catWalkFront() {
+      if(parseInt(image.style.marginLeft) >= window.innerWidth - image.offsetWidth) {
+        aux = 1;
+      }
+      image.style.marginLeft = parseInt(image.style.marginLeft) + 50 + 'px'; 
+    }
+
+    function catWalkBack() {
+      image.style.marginLeft = parseInt(image.style.marginLeft) - 50 + 'px';
+      if(parseInt(image.style.marginLeft) <= 0) {
+        aux = 0;
       }
     }
+
+
+    function decise(){
+      aux == 1 ? catWalkBack() : catWalkFront(); 
+    }
     
-    
+    setInterval(decise, 50);
+
   </script>
 </body>
 </html>
