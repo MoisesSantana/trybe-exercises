@@ -41,7 +41,14 @@
     
     squareButton.addEventListener('click', function() {
       let val = document.querySelector('#square-input').value;
-      console.log (`The result of squaring the number ${val} is ${squareNumber(val)}`);
+      document.querySelector('#solution').innerHTML = `The result of squaring the number ${val} is ${squareNumber(val)}`;
+    });
+
+    let squareInput = document.querySelector('#square-input');
+    
+    squareInput.addEventListener('keyup', function() {
+      let val = document.querySelector('#square-input').value;
+      document.querySelector('#solution').innerHTML = `The result of squaring the number ${val} is ${squareNumber(val)}`;
     });
     
     function squareNumber(num) {
@@ -54,8 +61,15 @@
     halfButton.addEventListener('click', function() {
       let num = document.querySelector('#half-input').value;
       let half = num / 2;
-      console.log (`Half of  ${num} is ${half}`);
-      return half;
+      document.querySelector('#solution').innerHTML = `Half of  ${num} is ${half}`;
+    });
+
+    let halfInput = document.querySelector('#half-input');
+
+    halfInput.addEventListener('keyup', function() {
+      let num = document.querySelector('#half-input').value;
+      let half = num / 2;
+      document.querySelector('#solution').innerHTML = `Half of  ${num} is ${half}`;
     });
     
     let percentButton = document.querySelector('#percent-button');
@@ -64,8 +78,25 @@
       let num1 = document.querySelector('#percent1-input').value;
       let num2 = document.querySelector('#percent2-input').value;
       let percent = (num1/num2) * 100;
-      console.log(`${num1} is ${percent}% of ${num2}`);
-      return percent;
+      document.querySelector('#solution').innerHTML = `${num1} is ${percent}% of ${num2}`;
+    });
+
+    let percentInput2 = document.querySelector('#percent2-input');
+    
+    percentInput2.addEventListener('keyup', function() {
+      let num1 = document.querySelector('#percent1-input').value;
+      let num2 = document.querySelector('#percent2-input').value;
+      let percent = (num1/num2) * 100;
+      document.querySelector('#solution').innerHTML = `${num1} is ${percent}% of ${num2}`;
+    });
+
+    let percentInput1 = document.querySelector('#percent1-input');
+    
+    percentInput1.addEventListener('keyup', function() {
+      let num1 = document.querySelector('#percent1-input').value;
+      let num2 = document.querySelector('#percent2-input').value;
+      let percent = (num1/num2) * 100;
+      document.querySelector('#solution').innerHTML = `${num1} is ${percent}% of ${num2}`;
     });
     
     let areaButton = document.querySelector('#area-button');
@@ -73,8 +104,15 @@
     areaButton.addEventListener('click', function() {
       let radius = document.querySelector('#area-input').value;
       let area = Math.PI * squareNumber(radius);
-      console.log(`The area of circle with radius ${radius} is ${area}`);
-      return area;
+      document.querySelector('#solution').innerHTML = `The area of circle with radius ${radius} is ${area}`;
+    });
+
+    let areaInput = document.querySelector('#area-input');
+    
+    areaInput.addEventListener('keyup', function() {
+      let radius = document.querySelector('#area-input').value;
+      let area = Math.PI * squareNumber(radius);
+      document.querySelector('#solution').innerHTML = `The area of circle with radius ${radius} is ${area}`;
     });
     
   </script>
