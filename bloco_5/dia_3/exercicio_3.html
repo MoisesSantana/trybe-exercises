@@ -45,9 +45,21 @@
         const productPrice = 59.99;
         const discount = 0.30;
         let botaoTarefa2 = document.querySelector('#botao-tarefa2');
-        console.log(botaoTarefa2);
+
         botaoTarefa2.addEventListener('click', function() {
           alert(`Desconto de R$${productPrice * discount}`);
+        });
+
+        let imgTarefa2 = document.querySelector('#img-tarefa2');
+
+        imgTarefa2.addEventListener('mouseover', function(event) {
+          imgTarefa2.src = './img2-ex3.jpg';
+          console.log(event.type);
+        });
+
+        imgTarefa2.addEventListener('mouseout', function(event){
+          imgTarefa2.src = './img1-ex3.jpg';
+          console.log(event.type);
         });
       }
       
@@ -69,7 +81,7 @@
       Além disso, sempre que um dos eventos for realizado deve-se logar no
       console qual dos eventos acabou de ocorrer.
     </p>
-    <!-- Adicione a tag <img /> aqui -->
+    <img id="img-tarefa2" src="./img1-ex3.jpg" alt="quadrado-1">
   </div>
 </body>
 </html>
