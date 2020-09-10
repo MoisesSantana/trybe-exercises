@@ -10,11 +10,12 @@
   
   <script>
     let image = document.querySelector('img');
-
     image.style.marginLeft = '0px';
 
+    setInterval(catWalk, 50);
+
     function catWalk() {
-      image.style.marginLeft = '10px';
+      image.style.marginLeft = parseInt(image.style.marginLeft) + 50 + 'px';
     }
   </script>
  </body>
