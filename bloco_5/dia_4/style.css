@@ -70,9 +70,16 @@ label:hover {
   font-size: x-large;
 }
 
-
-input {
+.radius-input {
   opacity: 0;
+}
+
+.number-input {
+  width: 50%;
+  margin: 30px 200px;
+  border: none;
+  height: 30px;
+  border-radius: 30px;
 }
 
 section {
