@@ -12,11 +12,11 @@
     <h1> AlterAção </h1>
     
     <ul>
-      <li><button>Background Color</button></li>
-      <li><button>Text Color</button></li>
-      <li><button>Font Size</button></li>
-      <li><button>Space Between Lines</button></li>
-      <li><button>Font Family</button></li>
+      <li><button id="background-button">Background Color</button></li>
+      <li><button id="color-button">Text Color</button></li>
+      <li><button id="size-button">Font Size</button></li>
+      <li><button id="space-button">Space Between Lines</button></li>
+      <li><button id="family-button">Font Family</button></li>
     </ul>
   </header>
   <section>
@@ -32,7 +32,7 @@
       <input type="radio" name="background-color-input" class="radius-input" id="background-blue" value="blue">
       <label for="background-blue">background blue</label>
     </form>
-
+    
     <form id="text-color-forms">
       <input type="radio" name="text-color-input" class="radius-input" id="text-black" value="black">
       <label for="text-black">text black</label>
@@ -45,7 +45,7 @@
       <input type="radio" name="text-color-input" class="radius-input" id="text-blue" value="blue">
       <label for="text-blue">text blue</label>
     </form>
-
+    
     <form id="font-size-forms">
       <input type="radio" name="font-size-input" class="radius-input" id="font-small" value="small">
       <label for="font-small">small</label>
@@ -58,18 +58,21 @@
       <input type="radio" name="font-size-input" class="radius-input" id="font-xx-large" value="xx-large">
       <label for="font-xx-large">xx large</label>
     </form>
-
+    
     <form id="line-height-forms">
       <label for="size-line-height">space between line text</label>
       <input type="number" name="line-height-input" class="number-input" id="size-line-height" placeholder=">>> Only numbers (value in pixels)!!!">
     </form>
-
+    
     <form id="font-family-forms">
-      
+      <input type="radius" name="font-family-input" class="radius-input" id="family-serif" value="serif">
+      <label for="family-serif">Serif</label>
+      <input type="radius" name="font-family-input" class="radius-input" id="family-sans-serif" value="sans-serif">
+      <label for="family-sans-serif">Sans-Serif</label>
+      <input type="radius" name="font-family-input" class="radius-input" id="family-monospace" value="monospace">
+      <label for="family-monospace">monospace</label>
     </form>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis mauris pellentesque mattis tristique a ex. Vivamus tempor efficitur accumsan. In sit amet eros posuere, molestie est vel, interdum sem. Morbi feugiat nisi fermentum nunc varius, at sodales odio lobortis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut faucibus dignissim dolor eget scelerisque. Donec vitae congue lectus, in vulputate risus. Integer pharetra, orci ac fringilla luctus, mauris risus euismod tellus, vel scelerisque erat felis sit amet felis. Suspendisse ac leo ornare, pellentesque turpis dignissim, vulputate massa. Morbi maximus arcu vel eros semper convallis.<br><br>
-      
-      Integer in risus non nunc eleifend vulputate ac id dui. Nam volutpat ex lorem, sed faucibus urna hendrerit non. Curabitur volutpat malesuada libero eget elementum. Morbi sagittis lectus at scelerisque venenatis. Maecenas vehicula leo vitae dui facilisis, eget feugiat eros convallis. Vestibulum interdum pretium viverra. Aenean in odio congue, lobortis odio at, dictum sapien. Integer dignissim convallis lorem, vitae consequat purus mattis id. Ut congue rhoncus lacus non ornare. Nullam facilisis est odio, et interdum erat ornare eu. Cras bibendum interdum efficitur.</p>
-    </section>
-  </body>
-  </html>
+    <article><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis mauris pellentesque mattis tristique a ex. Vivamus tempor efficitur accumsan. In sit amet eros posuere, molestie est vel, interdum sem. Morbi feugiat nisi fermentum nunc varius, at sodales odio lobortis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut faucibus dignissim dolor eget scelerisque. Donec vitae congue lectus, in vulputate risus. Integer pharetra, orci ac fringilla luctus, mauris risus euismod tellus, vel scelerisque erat felis sit amet felis. Suspendisse ac leo ornare, pellentesque turpis dignissim, vulputate massa. Morbi maximus arcu vel eros semper convallis.<br><br>Integer in risus non nunc eleifend vulputate ac id dui. Nam volutpat ex lorem, sed faucibus urna hendrerit non. Curabitur volutpat malesuada libero eget elementum. Morbi sagittis lectus at scelerisque venenatis. Maecenas vehicula leo vitae dui facilisis, eget feugiat eros convallis. Vestibulum interdum pretium viverra. Aenean in odio congue, lobortis odio at, dictum sapien. Integer dignissim convallis lorem, vitae consequat purus mattis id. Ut congue rhoncus lacus non ornare. Nullam facilisis est odio, et interdum erat ornare eu. Cras bibendum interdum efficitur.</p></article>
+  </section>
+</body>
+</html>
