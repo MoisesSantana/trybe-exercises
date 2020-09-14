@@ -42,27 +42,32 @@ window.onload = function () {
   });
 
   backgroundBlack.addEventListener('click', function () {
-    article.style.backgroundColor = 'black';
+    localStorage.setItem('background', 'black');
+    article.style.backgroundColor = localStorage.getItem('background');
     backgroundForms.style.display = 'none';
   });
 
   backgroundWhite.addEventListener('click', function () {
-    article.style.backgroundColor = 'white';
+    localStorage.setItem('background', 'white');
+    article.style.backgroundColor = localStorage.getItem('background');
     backgroundForms.style.display = 'none';
   });
 
   backgroundRed.addEventListener('click', function () {
-    article.style.backgroundColor = 'red';
+    localStorage.setItem('background', 'red');
+    article.style.backgroundColor = localStorage.getItem('background');
     backgroundForms.style.display = 'none';
   });
 
   backgroundGreen.addEventListener('click', function () {
-    article.style.backgroundColor = 'green';
+    localStorage.setItem('background', 'green');
+    article.style.backgroundColor = localStorage.getItem('background');
     backgroundForms.style.display = 'none';
   });
 
   backgroundBlue.addEventListener('click', function () {
-    article.style.backgroundColor = 'blue';
+    localStorage.setItem('background', 'blue');
+    article.style.backgroundColor = localStorage.getItem('background');
     backgroundForms.style.display = 'none';
   });
 
@@ -71,27 +76,32 @@ window.onload = function () {
   });
 
   textBlack.addEventListener('click', function () {
-    article.style.color = 'black';
+    localStorage.setItem('text', 'black');
+    article.style.color = localStorage.getItem('text');
     textColorForms.style.display = 'none';
   });
 
   textWhite.addEventListener('click', function () {
-    article.style.color = 'white';
+    localStorage.setItem('text', 'white');
+    article.style.color = localStorage.getItem('text');
     textColorForms.style.display = 'none';
   });
 
   textRed.addEventListener('click', function () {
-    article.style.color = 'red';
+    localStorage.setItem('text', 'red');
+    article.style.color = localStorage.getItem('text');
     textColorForms.style.display = 'none';
   });
 
   textGreen.addEventListener('click', function () {
-    article.style.color = 'green';
+    localStorage.setItem('text', 'green');
+    article.style.color = localStorage.getItem('text');
     textColorForms.style.display = 'none';
   });
 
   textBlue.addEventListener('click', function () {
-    article.style.color = 'blue';
+    localStorage.setItem('text', 'blue');
+    article.style.color = localStorage.getItem('text');
     textColorForms.style.display = 'none';
   });
 
@@ -100,57 +110,69 @@ window.onload = function () {
   });
   
   smallSize.addEventListener('click', function () {
-    article.style.fontSize = 'small';
+    localStorage.setItem('size', 'small');
+    article.style.fontSize = localStorage.getItem('size');
     sizeForms.style.display = 'none'
   });
 
   mediumSize.addEventListener('click', function () {
-    article.style.fontSize = 'medium';
+    localStorage.setItem('size', 'medium');
+    article.style.fontSize = localStorage.getItem('size');
     sizeForms.style.display = 'none'
   });
 
   largeSize.addEventListener('click', function () {
-    article.style.fontSize = 'large';
+    localStorage.setItem('size', 'large');
+    article.style.fontSize = localStorage.getItem('size');
     sizeForms.style.display = 'none'
   });
 
   largerSize.addEventListener('click', function () {
-    article.style.fontSize = 'larger';
+    localStorage.setItem('size', 'larger');
+    article.style.fontSize = localStorage.getItem('size');
     sizeForms.style.display = 'none'
   });
 
   xxLargeSize.addEventListener('click', function () {
-    article.style.fontSize = 'xx-large';
+    localStorage.setItem('size', 'xx-large');
+    article.style.fontSize = localStorage.getItem('size');
     sizeForms.style.display = 'none';
   });
 
-  //TA RESETANDO VALOR
   buttons[3].addEventListener('click', function () {
     lineHeight.style.display = 'block';
   });
 
   sizeLineHeight.addEventListener('keyup', function () {
-    let currentSize = sizeLineHeight.value;
-    article.style.lineHeight = currentSize + 'px';
+    localStorage.setItem('height', sizeLineHeight.value);
+    article.style.lineHeight = localStorage.getItem('height') + 'px';
   });
-  //ATE AQUI
 
   buttons[4].addEventListener('click', function () {
     familyForms.style.display = 'block';
   });
 
   serif.addEventListener('click', function () {
-    article.style.fontFamily = 'serif';
+    localStorage.setItem('family', 'serif');
+    article.style.fontFamily = localStorage.getItem('family');
     familyForms.style.display = 'none';
   });
 
   sans.addEventListener('click', function () {
-    article.style.fontFamily = 'sans';
+    localStorage.setItem('family', 'sans');
+    article.style.fontFamily = localStorage.getItem('family');
     familyForms.style.display = 'none';
   });
 
   monospace.addEventListener('click', function () {
-    article.style.fontFamily = 'monospace';
+    localStorage.setItem('family', 'monospace');
+    article.style.fontFamily = localStorage.getItem('family');
     familyForms.style.display = 'none';
   });
+
+  article.style.backgroundColor = localStorage.getItem('background');
+  article.style.color = localStorage.getItem('text');
+  article.style.fontSize = localStorage.getItem('size');
+  article.style.lineHeight = localStorage.getItem('height') + 'px';
+  article.style.fontFamily = localStorage.getItem('family');
 }
