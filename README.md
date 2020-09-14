@@ -6,11 +6,11 @@ Neste repositório contém exercício de diversas tecnologias, todos separados p
 
 ### Blocos até o momento:
 
-* 1-Shell Script
-* 2-Git e GitHub
-* 3-Introdução HTML e CSS
-* 4-Introdução JavaScript
-* 5-JavaScript DOM e Seletores
+1. Shell Script
+2. Git e GitHub
+3. Introdução HTML e CSS
+4. Introdução JavaScript
+5. JavaScript DOM e Seletores
 
 ## Sobre a Trybe
 
