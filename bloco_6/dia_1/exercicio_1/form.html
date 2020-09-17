@@ -11,12 +11,12 @@
     <fieldset>
       <legend>Dados pessoais</legend>
 
-      <div class="fieldsetRow">
+      <div class="fieldset-row">
         <label for="name">Nome: </label>
         <input type="text" name="name" id="name" maxlength="40" placeholder="ex: Maria" required>
       </div>
 
-      <div class="fieldsetRow">
+      <div class="fieldset-row">
         <label for="email">E-mail: </label>
         <input
          type="text"
@@ -27,7 +27,7 @@
          required>
       </div>
 
-      <div class="fieldsetRow">
+      <div class="fieldset-row">
         <label for="cpf">CPF: </label>
         <input
          type="number"
@@ -38,7 +38,7 @@
          required>
       </div>
 
-      <div class="fieldsetRow">
+      <div class="fieldset-row">
         <label for="address">Endereço: </label>
         <input
          type="text"
@@ -49,7 +49,7 @@
          required>
       </div>
 
-      <div class="fieldsetRow">
+      <div class="fieldset-row">
         <label for="city">Cidade: </label>
         <input 
          type="text" 
@@ -61,12 +61,12 @@
          required>
       </div>
 
-      <div class="fieldsetRow">
+      <div class="fieldset-row">
         <label for="state">Estado: </label>
         <select name="state" id="state"></select>
       </div>
 
-      <div class="fieldsetRow">
+      <div class="fieldset-row">
         <input
         type="radio"
         name="immobile"
@@ -79,6 +79,47 @@
          <label for="apartment">Apartamento</label>
       </div>
 
+    </fieldset>
+    <fieldset>
+      <legend>Experiências</legend>
+
+      <div class="fieldset-row">
+        <label for="resume">Resumo do currículo</label>
+        <textarea
+         name="resume"
+         id="resume"
+         cols="30"
+         rows="10"
+         maxlength="1000"
+         placeholder="Faça um breve resumo do seu currículo"
+         required></textarea>
+      </div>
+
+      <div class="fieldset-row">
+        <label for="offce">Cargo</label>
+        <input
+         type="text"
+         name="offce"
+         id="offce"
+         maxlength="40"
+         placeholder="ex: Professor"
+         required>
+      </div>
+
+      <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern - Isaac / Denner (pattern [x-y] <- de x até y {1,4} <- Uma entrada ou 4 / <- obrigatório usar a barra entre os valores -->
+
+      <div class="fieldset-row">
+        <label for="started-data">Data de inicio</label>
+        <input
+         type="text"
+         name="started-data"
+         id="started-data"
+         min="0"
+         placeholder="Obrigatório formato 'dd/mm/aaaa'"
+         pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}"
+         required>
+         
+      </div>
     </fieldset>
 
   </form>
