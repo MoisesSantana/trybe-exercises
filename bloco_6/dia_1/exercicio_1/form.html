@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trybelário</title>
+  <link rel="stylesheet" href="./stylse.css">
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>Dados pessoais</legend>
+
+      <div class="fieldsetRow">
+        <label for="name">Nome: </label>
+        <input type="text" name="name" id="name" maxlength="40" placeholder="ex: Maria" required>
+      </div>
+
+      <div class="fieldsetRow">
+        <label for="email">E-mail: </label>
+        <input
+         type="text"
+         name="email"
+         id="email"
+         maxlength="50"
+         placeholder="exemplo@email.com"
+         required>
+      </div>
+
+      <div class="fieldsetRow">
+        <label for="cpf">CPF: </label>
+        <input
+         type="number"
+         name="cpf"
+         id="cpf"
+         maxlength="11"
+         placeholder="Apenas números"
+         required>
+      </div>
+
+      <div class="fieldsetRow">
+        <label for="address">Endereço: </label>
+        <input
+         type="text"
+         name="address"
+         id="address" 
+         maxlength="200"
+         placeholder="Rua: trybo numero: 22 - tryberlândia" 
+         required>
+      </div>
+
+      <div class="fieldsetRow">
+        <label for="city">Cidade: </label>
+        <input 
+         type="text" 
+         name="city" 
+         id="city" 
+         maxlength="28" 
+         placeholder="ex: 
+         Rio de Trybero" 
+         required>
+      </div>
+
+      <div class="fieldsetRow">
+        <label for="state">Estado: </label>
+        <select name="state" id="state"></select>
+      </div>
+
+      <div class="fieldsetRow">
+        <input
+        type="radio"
+        name="immobile"
+        id="house">
+        <label for="house">Casa</label>
+        <input
+         type="radio"
+         name="immobile"
+         id="apartment">
+         <label for="apartment">Apartamento</label>
+      </div>
+
+    </fieldset>
+
+  </form>
+  
+
+  <script src="./script.js"></script>
+</body>
+</html>
