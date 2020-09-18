@@ -1,0 +1,93 @@
+body {
+  background-color: white;
+}
+
+header {
+  background-color: gainsboro;
+  font-family: monospace;
+  margin-bottom: 20px;
+  padding: 2px;
+  text-align: center;
+}
+
+main {
+  background-color: gainsboro;
+  border: 0.5px solid rgba(0 , 0 , 0 , 0.1);
+  border-radius: 5px;
+  margin: auto;
+  padding: 10px;
+  width: 500px;
+}
+
+fieldset {
+  background-color: whitesmoke;
+  border: 0.5px solid blue;
+  margin: 0 auto 15px auto;
+  transition: 0.4s;
+}
+
+fieldset:hover {
+  background-color: white;
+  transform: scale(1.1, 1.1);
+}
+
+legend {
+  color: blue;
+  font-family: sans-serif;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.fieldset-row {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+label {
+  font-family: sans-serif;
+}
+
+input {
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 4px rgba(0 , 0 , 0 , 0.4);
+  height: 30px;
+  margin-left: -5px;
+  text-align: center;
+  width: 100%;
+}
+
+input:focus {
+  background-color: gray;
+  color: white;
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+input:focus::placeholder {
+  color: white;
+}
+
+.input-radio {
+  box-shadow: none;
+  height: auto;
+  margin: auto;
+  width: auto;
+}
+
+textarea {
+  width: 100%
+}
+
+textarea:focus {
+  background-color: gray;
+  color: white;
+}
+
+textarea:focus::placeholder {
+  color: white;
+}
