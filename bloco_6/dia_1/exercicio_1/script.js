@@ -22,36 +22,6 @@ window.onload = function () {
   }
 };
 
-function nameValue() {
-  let valueOfName = name.value;
-  return valueOfName;
-}
-
-function cpfValue() {
-  let valueOfcpf = cpf.value;
-  return valueOfcpf;
-}
-
-function cityValue() {
-  let valueOfCity = city.value;
-  return valueOfCity;
-}
-
-function stateValue() {
-  let valueOfState = state.value;
-  return valueOfState;
-}
-
-function emailValue() {
-  let valueOfEmail = email.value;
-  return valueOfEmail;
-}
-
-function officeValue() {
-  let valueOfOffice = office.value;
-  return valueOfOffice;
-}
-
 function styleNewDiv(newDiv) {
   newDiv.style.backgroundColor = 'gray';
   newDiv.style.borderRadius = '5px';
@@ -68,7 +38,7 @@ send.addEventListener('click', function (event) {
   // https://www.w3schools.com/jsref/met_element_setattribute.asp;
 
   newDiv.setAttribute('id', 'curriculum');
-  newDiv.innerText = `Olá ${nameValue()} portador/portadora do CPF:${cpfValue()} infelizmente ainda não estamos contratando na cidade ${cityValue()} do estado ${stateValue()} para o cargo de ${officeValue()}. Salvamos os seus dados para futuras contratações, entraremos em contato pelo email: ${emailValue()}`;
+  newDiv.innerText = `Olá ${name.value} portador/portadora do CPF:${cpf.value} infelizmente ainda não estamos contratando na cidade ${city.value} do estado ${state.value} para o cargo de ${office.value}. Salvamos os seus dados para futuras contratações, entraremos em contato pelo email: ${email.value}`;
   main.appendChild(newDiv);
   styleNewDiv(newDiv);
 });
