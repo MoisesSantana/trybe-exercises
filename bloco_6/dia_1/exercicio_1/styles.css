@@ -99,7 +99,7 @@ button {
   cursor: pointer;
   font-weight: 900;
   height: 80px;
-  margin: 0 40px;
+  margin: 0 40px 50px 40px;
   text-transform: uppercase;
   width: 80px;
 }

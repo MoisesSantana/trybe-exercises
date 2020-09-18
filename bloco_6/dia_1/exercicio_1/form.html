@@ -14,124 +14,71 @@
     <form>
       <fieldset>
         <legend>Dados pessoais</legend>
-        
+
         <div class="fieldset-row">
           <label for="name">Nome</label>
           <input type="text" name="name" id="name" maxlength="40" placeholder="ex: Maria" required>
         </div>
-        
+
         <div class="fieldset-row">
           <label for="email">E-mail</label>
-          <input
-          type="text"
-          name="email"
-          id="email"
-          maxlength="50"
-          placeholder="exemplo@email.com"
-          required>
+          <input type="text" name="email" id="email" maxlength="50" placeholder="exemplo@email.com" required>
         </div>
-        
+
         <div class="fieldset-row">
           <label for="cpf">CPF</label>
-          <input
-          type="number"
-          name="cpf"
-          id="cpf"
-          maxlength="11"
-          placeholder="Apenas números"
-          required>
+          <input type="number" name="cpf" id="cpf" maxlength="11" placeholder="Apenas números" required>
         </div>
-        
+
         <div class="fieldset-row">
           <label for="address">Endereço</label>
-          <input
-          type="text"
-          name="address"
-          id="address" 
-          maxlength="200"
-          placeholder="Rua: trybo numero: 22 - tryberlândia" 
-          required>
+          <input type="text" name="address" id="address" maxlength="200" placeholder="Rua: trybo numero: 22 - tryberlândia" required>
         </div>
-        
+
         <div class="fieldset-row">
           <label for="city">Cidade</label>
-          <input 
-          type="text" 
-          name="city" 
-          id="city" 
-          maxlength="28" 
-          placeholder="ex: Rio de Trybero" 
-          required>
+          <input type="text" name="city" id="city" maxlength="28" placeholder="ex: Rio de Trybero" required>
         </div>
-        
+
         <div class="fieldset-row">
           <label for="state">Estado</label>
           <select name="state" id="state"></select>
         </div>
-        
+
         <div class="fieldset-row">
-          <input
-          class="input-radio"
-          type="radio"
-          name="immobile"
-          id="house"
-          required>
+          <input class="input-radio" type="radio" name="immobile" id="house" required>
           <label for="house">Casa</label>
-          <input
-          class="input-radio"
-          type="radio"
-          name="immobile"
-          id="apartment"
-          required>
+
+          <input class="input-radio" type="radio" name="immobile" id="apartment" required>
           <label for="apartment">Apartamento</label>
         </div>
-        
+
       </fieldset>
       <fieldset>
         <legend>Experiências</legend>
-        
+
         <div class="fieldset-row">
           <label for="resume">Resumo do currículo</label>
-          <textarea
-          name="resume"
-          id="resume"
-          cols="30"
-          rows="10"
-          maxlength="1000"
-          placeholder="Faça um breve resumo do seu currículo"
-          required></textarea>
+          <textarea name="resume" id="resume" cols="30" rows="10" maxlength="1000" placeholder="Faça um breve resumo do seu currículo" required></textarea>
         </div>
-        
+
         <div class="fieldset-row">
           <label for="offce">Cargo</label>
-          <input
-          type="text"
-          name="offce"
-          id="offce"
-          maxlength="40"
-          placeholder="ex: Professor"
-          required>
+          <input type="text" name="office" id="office" maxlength="40" placeholder="ex: Professor" required>
         </div>
-        
+
         <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern - Isaac / Denner (pattern [x-y] <- de x até y {1,4} <- Uma entrada ou 4 / <- obrigatório usar a barra entre os valores -->
-        
+
         <div class="fieldset-row">
           <label for="started-data">Data de inicio</label>
-          <input
-          type="text"
-          name="started-data"
-          id="started-data"
-          min="0"
-          placeholder="Obrigatório formato 'dd/mm/aaaa'"
-          pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}"
-          required>
+          <input type="text" name="started-data" id="started-data" min="0" placeholder="Obrigatório formato 'dd/mm/aaaa'" pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}" required>
         </div>
       </fieldset>
       <button type="submit" id="send">Enviar</button>
       <button type="reset" id="clear">Limpar</button>
     </form>
   </main>
-  
+
   <script src="./script.js"></script>
 </body>
 </html>
