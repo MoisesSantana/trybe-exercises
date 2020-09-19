@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./DatePickerX-master/dist/css/DatePickerX.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <link rel="stylesheet" href="./popup-validation-master/bin/validation.min.css">
+</head>
+<body>
+  
+  <header>
+    <h1>Trybelário</h1>
+  </header>
+  <main>
+    <form>
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input class="form-control" type="text" name="name" id="name" maxlength="40" placeholder="ex: Maria" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input class="form-control" type="text" name="email" id="email" maxlength="50" placeholder="exemplo@email.com" required>        
+      </div>
+
+      <div class="form-group">
+        <label for="cpf">CPF</label>
+        <input type="number" name="cpf" id="cpf" maxlength="11" placeholder="Apenas números" required>
+      </div>
+
+      <div class="form-group">
+
+      </div>
+
+      <div class="form-group">
+
+      </div>
+
+      <div class="form-group">
+
+      </div>
+
+      <div class="form-group">
+
+      </div>
+
+      <div class="form-group">
+
+      </div>
+
+      <div class="form-group">
+
+      </div>
+
+      <div class="form-group">
+
+      </div>
+
+
+      //////////////////////////////////
+      
+      
+      <div class="fieldset-row">
+      </div>
+      
+      <div class="fieldset-row">
+        <label for="address">Endereço</label>
+        <input type="text" name="address" id="address" maxlength="200" placeholder="Rua: trybo numero: 22 - tryberlândia" required>
+      </div>
+      
+      <div class="fieldset-row">
+        <label for="city">Cidade</label>
+        <input type="text" name="city" id="city" maxlength="28" placeholder="ex: Rio de Trybero" required>
+      </div>
+      
+      <div class="fieldset-row">
+        <label for="state">Estado</label>
+        <select name="state" id="state"></select>
+      </div>
+      
+      <div class="fieldset-row">
+        <input class="input-radio" type="radio" name="immobile" id="house" required>
+        <label for="house">Casa</label>
+        
+        <input class="input-radio" type="radio" name="immobile" id="apartment" required>
+        <label for="apartment">Apartamento</label>
+      </div>
+      
+    </fieldset>
+    <fieldset>
+      <legend>Experiências</legend>
+      
+      <div class="fieldset-row">
+        <label for="resume">Resumo do currículo</label>
+        <textarea name="resume" id="resume" cols="30" rows="10" maxlength="1000" placeholder="Faça um breve resumo do seu currículo" required></textarea>
+      </div>
+      
+      <div class="fieldset-row">
+        <label for="offce">Cargo</label>
+        <input type="text" name="office" id="office" maxlength="40" placeholder="ex: Professor" required>
+      </div>
+      
+      <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern - Isaac / Denner (pattern [x-y] <- de x até y {1,4} <- Uma entrada ou 4 / <- obrigatório usar a barra entre os valores -->
+      
+      <div class="fieldset-row">
+        <label for="started-data">Data de inicio</label>
+        <input type="text" name="started-data" id="started-data" min="0" placeholder="Obrigatório formato 'dd/mm/aaaa'" pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}" required>
+      </div>
+    </fieldset>
+    <button type="submit" id="send">Enviar</button>
+    <button type="reset" id="clear">Limpar</button>
+  </form>
+</main>
+
+<script src="./js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./DatePickerX-master/dist/js/DatePickerX.min.js"></script>
+<script src="./popup-validation-master/bin/validation.min.js"></script>
+<script src="./Just-validate-master/dist/js/just-validate.min.js"></script>
+</body>
+</html>
