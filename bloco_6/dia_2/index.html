@@ -5,90 +5,118 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" href="./DatePickerX-master/dist/css/DatePickerX.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
-  <link rel="stylesheet" href="./popup-validation-master/bin/validation.min.css">
 </head>
 <body>
-  
-  <header>
-    <h1>Trybelário</h1>
-  </header>
-  <div class="container-md">
-    <form>
-      <div class="form-row">
-        <div class="form-group col-md-7">
-          <label for="name">Nome</label>
-          <input class="form-control" type="text" name="name" id="name" maxlength="40" placeholder="ex: Maria" required>
-        </div>
+  <div class="card">
+    <h1 class="card-header">Trybelário</h1>
+    <div class="card-body">
+      <div class="container-xl">
         
-        <div class="form-group col-md-5">
-          <label for="cpf">CPF</label>
-          <input class="form-control" type="number" name="cpf" id="cpf" maxlength="11" placeholder="Apenas números" required>
-        </div>
+        <form action="#" class="js-form form">
+          
+          <div class="form-row">
+            <div class="form-group col-md-7">
+              <label for="name">Nome</label>
+              <input type="text" class="form__input form-control" placeholder="Digite seu nome" autocomplete="off" data-validate-field="name" name="name" id="name">
+            </div>
+            
+            <div class="form-group col-md-5">
+              <label for="cpf">CPF</label>
+              <input class="form__input form-control" type="number" name="cpf" id="cpf" maxlength="11" placeholder="Apenas números" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" class="form__input form-control" placeholder="exemplo@email.com" autocomplete="off" data-validate-field="email" name="email" id="email">
+            <small class="form-text text-muted">Não compartilharemos seu email com ninguém</small>   
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="address">Endereço</label>
+              <input class="form__input form-control" type="text" name="address" id="address" maxlength="200" placeholder="Rua: trybo numero: 22 - tryberlândia" required>
+            </div>
+            
+            <div class="form-group col-md-4">
+              <label for="city">Cidade</label>
+              <input class="form__input form-control" type="text" name="city" id="city" maxlength="28" placeholder="ex: Rio de Trybero" required>
+            </div>
+            
+            <div class="form-group col-md-2">
+              <label for="state">Estado</label>
+              <select class="form-control" name="state" id="state"></select>
+            </div>
+          </div>
+          
+          <div class="form-check form-check-inline">
+            
+            <label class="form-check-label"><input type="radio" name="radio" class="form-check-input form__radio">Casa</label>
+            
+          </div>
+          <div class="form-check form-check-inline">  
+            
+            <label class="form-check-label"><input type="radio" name="radio" class="form-check-input form__radio">Apartamento</label>
+            
+          </div>
+          
+          <div class="form-group">
+            <label for="text">Resumo do currículo</label>
+            <textarea name="msg" cols="30" rows="10" class="form__textarea form-control" data-validate-field="text" id="text"></textarea>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group col-md-8">
+              <label for="offce">Cargo</label>
+              <input class="form__input form-control" type="text" name="office" id="office" maxlength="40" placeholder="ex: Professor" required>
+            </div>
+            
+            <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern - Isaac / Denner (pattern [x-y] <- de x até y {1,4} <- Uma entrada ou 4 / <- obrigatório usar a barra entre os valores -->
+            
+            <!-- pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}" -->
+            
+            <div class="form-group col-md-4">
+              <label for="datepicker">Data de inicio</label>
+              <input class="form-control" type="text" name="started-data" id="datepicker" required>
+            </div>
+          </div>
+          <button class="form_btn btn btn-primary">Enviar</button>
+          <button type="reset" id="clear" class="btn btn-secondary">Limpar</button>
+        </form>
       </div>
-      
-      <div class="form-group">
-        <label for="email">E-mail</label>
-        <input class="form-control" type="email" name="email" id="email" maxlength="50" placeholder="exemplo@email.com" required>   
-        <small class="form-text text-muted">Não compartilharemos seu email com ninguém</small>     
-      </div>
-      
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="address">Endereço</label>
-          <input class="form-control" type="text" name="address" id="address" maxlength="200" placeholder="Rua: trybo numero: 22 - tryberlândia" required>
-        </div>
-
-        <div class="form-group col-md-4">
-          <label for="city">Cidade</label>
-          <input class="form-control" type="text" name="city" id="city" maxlength="28" placeholder="ex: Rio de Trybero" required>
-        </div>
-        
-        <div class="form-group col-md-2">
-          <label for="state">Estado</label>
-          <select class="form-control" name="state" id="state"></select>
-        </div>
-      </div>
-      
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="immobile" id="house" required>
-        <label class="form-check-label" for="house">Casa</label>
-      </div>
-      <div class="form-check form-check-inline">  
-        <input class="form-check-input" type="radio" name="immobile" id="apartment" required>
-        <label class="form-check-label" for="apartment">Apartamento</label>
-      </div>
-      
-      <div class="form-group">
-        <label for="resume">Resumo do currículo</label>
-        <textarea class="form-control" name="resume" id="resume" cols="30" rows="10" maxlength="1000" placeholder="Faça um breve resumo do seu currículo" required></textarea>
-      </div>
-      
-      <div class="form-row">
-        <div class="form-group col-md-8">
-          <label for="offce">Cargo</label>
-          <input class="form-control" type="text" name="office" id="office" maxlength="40" placeholder="ex: Professor" required>
-        </div>
-        
-        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern - Isaac / Denner (pattern [x-y] <- de x até y {1,4} <- Uma entrada ou 4 / <- obrigatório usar a barra entre os valores -->
-        
-        <div class="form-group col-md-4">
-          <label for="started-data">Data de inicio</label>
-          <input class="form-control" type="text" name="started-data" id="started-data" min="0" placeholder="Obrigatório formato 'dd/mm/aaaa'" pattern="[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}" required>
-        </div>
-      </div>
-      <button type="submit" id="send"></button>
-      <button type="reset" id="clear">Limpar</button>
-    </form>
-    <button type="button" id="send" class="btn btn-primary">Enviar</button>
+    </div>
   </div>
+  
+  
   
   <script src="./js/jquery-3.5.1.min.js"></script>
   <script type="text/javascript" src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
   <script src="./js/bootstrap.min.js"></script>
-  <script src="./DatePickerX-master/dist/js/DatePickerX.min.js"></script>
-  <script src="./popup-validation-master/bin/validation.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"> </script>
+  <script>
+    
+    var picker = new Pikaday({
+      field: document.getElementById('datepicker'),
+      format: 'D/M/YYYY',
+      toString(date, format) {
+        // you should do formatting based on the passed format,
+        // but we will just return 'D/M/YYYY' for simplicity
+        const day = date.getDate();
+        const month = date.getMonth() + 1;
+        const year = date.getFullYear();
+        return `${day}/${month}/${year}`;
+      },
+      parse(dateString, format) {
+        // dateString is the result of `toString` method
+        const parts = dateString.split('/');
+        const day = parseInt(parts[0], 10);
+        const month = parseInt(parts[1], 10) - 1;
+        const year = parseInt(parts[2], 10);
+        return new Date(year, month, day);
+      }
+    });
+  </script>
   <script src="./Just-validate-master/dist/js/just-validate.min.js"></script>
 </body>
 </html>
