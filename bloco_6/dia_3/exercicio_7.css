@@ -1,2 +1,7 @@
 /* https://flexboxfroggy.com/ */
 
+#pond {
+  display: flex;
+justify-content: space-around;
+align-items: flex-end;
+}
