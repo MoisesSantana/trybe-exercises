@@ -1,2 +1,6 @@
 /* https://flexboxfroggy.com/ */
 
+#pond {
+  display: flex;
+flex-direction: column;
+}
