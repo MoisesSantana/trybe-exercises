@@ -51,7 +51,8 @@ new window.JustValidate('.teste', {
     },
     stateForm: {
       required: true,
-    }
+      minLength: 4,
+    },
   },
 });
 
