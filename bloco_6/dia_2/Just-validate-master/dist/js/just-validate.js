@@ -396,11 +396,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         },
 
         defaultMessages: {
-            required: 'The field is required',
-            email: 'Please, type a valid email',
-            maxLength: 'The field must contain a maximum of :value characters',
-            minLength: 'The field must contain a minimum of :value characters',
-            password: 'Password is not valid',
+            required: 'Esse campo é obrigatório!',
+            email: 'Por favor, insira um e-mail válido!',
+            maxLength: 'Esse campo deve ter no máximo :value caracteres',
+            minLength: 'Esse campo deve ter no mínimo :value caracteres',
+            password: 'Essa senha não é válida',
             remote: 'Email already exists',
             strength: 'Password must contents at least one uppercase letter, one lowercase letter and one number',
             function: 'Function returned false'

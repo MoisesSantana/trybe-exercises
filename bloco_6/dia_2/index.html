@@ -13,17 +13,19 @@
     <div class="card-body">
       <div class="container-xl">
         
-        <form action="#" class="js-form form">
+        <form action="#" class="js-form form teste">
           
           <div class="form-row">
             <div class="form-group col-md-7">
               <label for="name">Nome</label>
+
               <input type="text" class="form__input form-control" placeholder="Digite seu nome" autocomplete="off" data-validate-field="name" name="name" id="name">
+
             </div>
             
             <div class="form-group col-md-5">
               <label for="cpf">CPF</label>
-              <input class="form__input form-control" type="number" name="cpf" id="cpf" maxlength="11" placeholder="Apenas números" required>
+              <input class="form__input form-control" type="number" name="cpf" data-validate-field="document" id="cpf" placeholder="Apenas números">
             </div>
           </div>
           
@@ -36,29 +38,29 @@
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="address">Endereço</label>
-              <input class="form__input form-control" type="text" name="address" id="address" maxlength="200" placeholder="Rua: trybo numero: 22 - tryberlândia" required>
+              <input class="form__input form-control" type="text" name="address" data-validate-field="addressForm" id="address" maxlength="200" placeholder="Rua: trybo numero: 22 - tryberlândia">
             </div>
             
             <div class="form-group col-md-4">
               <label for="city">Cidade</label>
-              <input class="form__input form-control" type="text" name="city" id="city" maxlength="28" placeholder="ex: Rio de Trybero" required>
+              <input class="form__input form-control" type="text" data-validate-field="cityForm" name="city" id="city" placeholder="ex: Rio de Trybero">
             </div>
             
             <div class="form-group col-md-2">
               <label for="state">Estado</label>
-              <select class="form-control" name="state" id="state"></select>
+              <select data-validate-field="stateForm" class="form-control" name="state" id="state">
+                <option selected disabled>Estado</option>
+              </select>
             </div>
           </div>
           
           <div class="form-check form-check-inline">
-            
-            <label class="form-check-label"><input type="radio" name="radio" class="form-check-input form__radio">Casa</label>
-            
+            <input type="radio" data-validate-field="radio" name="radio" class="form-check-input form__radio">            
+            <label class="form-check-label">Casa</label>
           </div>
           <div class="form-check form-check-inline">  
-            
-            <label class="form-check-label"><input type="radio" name="radio" class="form-check-input form__radio">Apartamento</label>
-            
+            <input type="radio" data-validate-field="radio" name="radio" class="form-check-input form__radio">            
+            <label class="form-check-label">Apartamento</label>
           </div>
           
           <div class="form-group">
@@ -69,7 +71,7 @@
           <div class="form-row">
             <div class="form-group col-md-8">
               <label for="offce">Cargo</label>
-              <input class="form__input form-control" type="text" name="office" id="office" maxlength="40" placeholder="ex: Professor" required>
+              <input class="form__input form-control" type="text" data-validate-field="officeForm" name="office" id="office" placeholder="ex: Professor">
             </div>
             
             <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern - Isaac / Denner (pattern [x-y] <- de x até y {1,4} <- Uma entrada ou 4 / <- obrigatório usar a barra entre os valores -->
@@ -78,11 +80,11 @@
             
             <div class="form-group col-md-4">
               <label for="datepicker">Data de inicio</label>
-              <input class="form-control" type="text" name="started-data" id="datepicker" required>
+              <input class="form-control" type="text" data-validate-field="dataForm" name="started-data" id="datepicker">
             </div>
           </div>
-          <button class="form_btn btn btn-primary">Enviar</button>
-          <button type="reset" id="clear" class="btn btn-secondary">Limpar</button>
+          <button id="send" class="form_btn btn btn-primary">Enviar</button>
+          <button id="clear" type="reset" id="clear" class="btn btn-secondary">Limpar</button>
         </form>
       </div>
     </div>
@@ -94,29 +96,7 @@
   <script type="text/javascript" src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
   <script src="./js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"> </script>
-  <script>
-    
-    var picker = new Pikaday({
-      field: document.getElementById('datepicker'),
-      format: 'D/M/YYYY',
-      toString(date, format) {
-        // you should do formatting based on the passed format,
-        // but we will just return 'D/M/YYYY' for simplicity
-        const day = date.getDate();
-        const month = date.getMonth() + 1;
-        const year = date.getFullYear();
-        return `${day}/${month}/${year}`;
-      },
-      parse(dateString, format) {
-        // dateString is the result of `toString` method
-        const parts = dateString.split('/');
-        const day = parseInt(parts[0], 10);
-        const month = parseInt(parts[1], 10) - 1;
-        const year = parseInt(parts[2], 10);
-        return new Date(year, month, day);
-      }
-    });
-  </script>
-  <script src="./Just-validate-master/dist/js/just-validate.min.js"></script>
+  <script src="./Just-validate-master/dist/js/just-validate.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
