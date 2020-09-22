@@ -1,0 +1,11 @@
+/* http://www.flexboxdefense.com/ */
+
+.tower-group-1 {
+  display: flex;
+  flex-direction: column;
+}
+.tower-group-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

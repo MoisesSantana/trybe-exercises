@@ -1,0 +1,6 @@
+/* http://www.flexboxdefense.com/ */
+
+.torre-grupo-1 {
+  display: flex;
+  justify-content: center;
+}
