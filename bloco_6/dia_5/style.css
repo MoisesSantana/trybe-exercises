@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgb(13, 120, 235);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+h1 {
+  color: white;
+  font-family: monospace;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+article {
+  margin: auto;
+  width: 90%;
+}
+
+article p {
+  color: rgba(0, 0, 0, 0.748);
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+h2 {
+  background-color: rgba(0, 0, 0, 0.748);
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 1.5rem;
+  padding: 3px 0;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+.grid li {
+  width: 45%;
+}
+
+.grid li:hover {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+  position: relative;
+}
+
+figcaption {
+  background-color: rgba(0, 0, 0, 0.748);
+  color: white;
+  bottom: 10px;
+  left: 10px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  article p {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+  
+  .grid li {
+    width: 50%;
+  }
+
+  .grid li:hover {
+    width: 50%;
+  }
+}
