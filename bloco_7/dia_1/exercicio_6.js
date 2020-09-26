@@ -1,4 +1,4 @@
-// const arraySkills = ['CSS', 'HTML', 'JS', 'Algoritmo', 'Empatia'];
+const arraySkills = ['CSS', 'HTML', 'JS', 'Algoritmo', 'Empatia'];
 
 const replaceInX = (phrase) => {
   const arrayOfPhrases = phrase.split(' ');
@@ -10,4 +10,11 @@ const replaceInX = (phrase) => {
   }
 }
 
-console.log(replaceInX('Tryber x aqui!'));
+const withoutX = replaceInX('Tryber x aqui');
+
+const templateString = (firstFunction) => {
+  let stringSkills = arraySkills.join(' ');
+  return `${firstFunction} ${stringSkills}`;
+}
+
+console.log(templateString(withoutX));
