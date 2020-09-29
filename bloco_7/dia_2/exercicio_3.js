@@ -42,11 +42,20 @@ console.log(allLessons);
 
 const tarefa6 = (allLessons) => {
   let result = allLessons.lesson1['numeroEstudantes'];
-  console.log(result)
   result += allLessons.lesson2['numeroEstudantes'];
-  console.log(result)
   result += allLessons.lesson3['numeroEstudantes'];
   return result;
 }
 
 console.log(tarefa6(allLessons));
+
+const tarefa7 = (lesson1, position) => {
+  keysArray = Object.keys(lesson1);
+  for (let index = 0; index < keysArray; index += 1) {
+    if (index === position) {
+      
+    }
+  }
+}
+
+console.log(tarefa7(lesson1, 0));
