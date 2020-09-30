@@ -1,0 +1,143 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: rgb(237, 231, 217);
+}
+
+header p {
+  background-color: rgb(164, 150, 148);
+  color: rgb(75, 66, 55);
+  font-family: Dancing Script, cursive;
+  margin-top: 0;
+  padding: 10px 0;
+}
+
+nav {
+  font-family: Ubuntu Mono, monospace;
+}
+
+.menu-title {
+  font-family: Ubuntu Mono, monospace;
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav li {
+  list-style: none;
+}
+
+p {
+  font-family: Comfortaa, cursive;
+  line-height: 30px;
+  text-align: justify;
+  word-spacing: 5px;
+}
+
+footer {
+  border-top: 10px dotted black;
+}
+
+h3 {
+  text-align: center;
+}
+
+footer p {
+  background-color: rgb(213, 160, 33);
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    scroll-padding-top: 300px;
+  }
+  
+  header {
+    background-color: rgb(237, 231, 217);
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  header p {
+    font-size: 20pt;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  
+  nav {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  
+  .menu-title {
+    background-color: rgb(213, 160, 33);
+    color: rgb(237, 231, 217);
+    font-size: 18pt;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  nav ul {
+    margin: 0;
+    width: 100%;
+  }
+  
+  nav a {
+    color: rgb(237, 231, 217);
+    text-decoration: none;
+  }
+  
+  nav li {
+    align-items: center;
+    background-color: rgb(75, 66, 55);
+    color: rgb(237, 231, 217);
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    text-align: center;
+  }
+  
+  main {
+    margin-top: 300px;
+    padding: 3px;
+  }
+  
+  aside {
+    background-color: rgb(213, 160, 33);
+    border: 3px dashed rgb(75, 66, 55);
+    margin-bottom: 20px;
+  }
+  
+  h1, h2 {
+    color: rgb(115, 107, 96);
+    font-family: Dancing Script, cursive;
+    margin-left: 10px;
+  }
+  
+  aside li {
+    color: rgb(75, 66, 55);
+    font-family: Comfortaa, cursive;
+  }
+  
+  h1 span {
+    color: rgb(75, 66, 55);
+    font-family: Ubuntu Mono, monospace;
+  }
+
+  article {
+    font-size: 16pt;
+  }
+}
