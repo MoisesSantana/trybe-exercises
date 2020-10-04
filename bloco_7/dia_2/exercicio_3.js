@@ -50,7 +50,7 @@ const tarefa6 = (allLessons) => {
 console.log(tarefa6(allLessons));
 
 const tarefa7 = (lesson1, position) => {
-  keysArray = Object.keys(lesson1);
+  const keysArray = Object.keys(lesson1);
   const positionPlusIndex = keysArray[position];
   return lesson1[positionPlusIndex];
 }
@@ -58,6 +58,41 @@ const tarefa7 = (lesson1, position) => {
 console.log(tarefa7(lesson1, 0));
 
 const tarefa8 = (lessons, keys, values) => lessons[keys] === values;
+
 console.log(tarefa8(lesson3, 'turno', 'noite'));
 
 console.log(tarefa8(lesson3, 'materia', 'Maria Clara'));
+
+const tarefa9 = (allLessons) => {
+  let result = 0;
+  const keysArray = (Object.keys(allLessons));
+  keysArray.forEach (item => {
+    if (allLessons[item]['materia'] === 'Matemática') {
+      result += allLessons[item]['numeroEstudantes'];
+    }
+  });
+  return result;
+}
+
+console.log(tarefa9(allLessons));
+
+const tarefa10 = (allLessons, teachear) => {
+  const newObj = {};
+  const allClasses = [];
+  let allStudents = 0;
+
+  const keysArray = Object.keys(allLessons);
+
+  keysArray.forEach (item => {
+    if (allLessons[item]['professor'] === teachear) {
+      allClasses.push(allLessons[item]['materia']);
+      allStudents += allLessons[item]['numeroEstudantes'];
+    }
+  });
+
+  newObj.professor = teachear;
+  Object.assign(newObj, {aulas: allClasses, estudantes: allStudents});
+  return newObj;
+}
+
+console.log(tarefa10(allLessons, 'Maria Clara'));
