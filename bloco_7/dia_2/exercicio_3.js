@@ -51,11 +51,13 @@ console.log(tarefa6(allLessons));
 
 const tarefa7 = (lesson1, position) => {
   keysArray = Object.keys(lesson1);
-  for (let index = 0; index < keysArray; index += 1) {
-    if (index === position) {
-      
-    }
-  }
+  const positionPlusIndex = keysArray[position];
+  return lesson1[positionPlusIndex];
 }
 
 console.log(tarefa7(lesson1, 0));
+
+const tarefa8 = (lessons, keys, values) => lessons[keys] === values;
+console.log(tarefa8(lesson3, 'turno', 'noite'));
+
+console.log(tarefa8(lesson3, 'materia', 'Maria Clara'));
