@@ -1,0 +1,269 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: rgb(237, 231, 217);
+}
+
+header {
+  background-color: rgb(237, 231, 217);
+}
+
+header p {
+  background-color: rgb(164, 150, 148);
+  color: rgb(75, 66, 55);
+  font-family: Dancing Script, cursive;
+  margin-top: 0;
+  padding: 10px 0;
+}
+
+nav {
+  font-family: Ubuntu Mono, monospace;
+}
+
+.menu-title {
+  font-family: Ubuntu Mono, monospace;
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav li {
+  list-style: none;
+}
+
+button {
+  border: none;
+}
+
+button a {
+  background-color: rgba(75, 66, 55, 0.9);
+  bottom: 0;
+  color: rgb(213, 160, 33);
+  font-size: 20pt;
+  height: 30px;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+
+button a:hover {
+  background-color: rgb(75, 66, 55);
+}
+
+h1, h2 {
+  color: rgb(115, 107, 96);
+  font-family: Dancing Script, cursive;
+}
+
+aside li {
+  color: rgb(75, 66, 55);
+  font-family: Comfortaa, cursive;
+}
+
+h1 span {
+  color: rgb(75, 66, 55);
+  font-family: Ubuntu Mono, monospace;
+}
+
+p {
+  font-family: Comfortaa, cursive;
+  line-height: 30px;
+  text-align: justify;
+  word-spacing: 5px;
+}
+
+footer {
+  border-top: 10px dotted black;
+  margin-bottom: 30px;
+}
+
+h3 {
+  text-align: center;
+}
+
+footer p {
+  background-color: rgb(213, 160, 33);
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  header p {
+    font-size: 20pt;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  
+  nav {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  
+  .menu-title {
+    background-color: rgb(213, 160, 33);
+    color: rgb(237, 231, 217);
+    font-size: 18pt;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  nav ul {
+    margin: 0;
+    width: 100%;
+  }
+  
+  nav a {
+    color: rgb(237, 231, 217);
+    text-decoration: none;
+  }
+  
+  nav li {
+    align-items: center;
+    background-color: rgb(75, 66, 55);
+    color: rgb(237, 231, 217);
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    text-align: center;
+  }
+  
+  main {
+    margin-top: 10px;
+    padding: 3px;
+  }
+  
+  aside {
+    background-color: rgb(213, 160, 33);
+    border: 3px dashed rgb(75, 66, 55);
+    margin-bottom: 20px;
+  }
+  
+  h1, h2 {
+    margin-left: 10px;
+  }
+
+  article {
+    font-size: 16pt;
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  header p {
+    font-size: 20pt;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  nav {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  
+  .menu-title {
+    background-color: rgb(213, 160, 33);
+    color: rgb(237, 231, 217);
+    font-size: 18pt;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  nav ul {
+    margin: 0;
+    width: 100%;
+  }
+  
+  nav a {
+    color: rgb(237, 231, 217);
+    text-decoration: none;
+  }
+  
+  nav li {
+    align-items: center;
+    background-color: rgb(75, 66, 55);
+    color: rgb(237, 231, 217);
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    text-align: center;
+  }
+
+  .asides {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  aside h2 {
+    background-color: rgb(237, 231, 217);
+    box-shadow: 0 3px 3px rgba(75, 66, 55, 0.9);
+    margin: 0 0 10px -7%;
+    text-align: center;
+    width: 110%;
+  }
+
+  aside {
+    background-color: rgb(213, 160, 33);
+    margin: 20px 0;
+    padding: 10px 0 10px 10px;
+    width: 250px;
+  }
+
+  aside ul {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  aside li {
+    list-style: none;
+    line-height: 30px;
+  }
+
+  aside li span {
+    color: rgb(237, 231, 217);
+  }
+
+  .main-content {
+    padding: 30px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  header p {
+    border-bottom: 5px solid rgb(213, 160, 33);
+    font-size: 28pt;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  nav {
+    display: none;
+  }
+  
+  aside {
+    width: 400px;
+  }
+
+  aside h2 {
+    width: 110%;
+    margin: 0 0 10px -6.5%;
+  }
+}
