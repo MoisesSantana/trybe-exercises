@@ -13,7 +13,8 @@ const replaceInX = (phrase) => {
 const withoutX = replaceInX('Tryber x aqui');
 
 const templateString = (firstFunction) => {
-  let stringSkills = arraySkills.join(' ');
+  let stringSkills = arraySkills.sort();
+  stringSkills = arraySkills.join(' ');
   return `${firstFunction} ${stringSkills}`;
 }
 
