@@ -1,4 +1,3 @@
-    
 const assert = require('assert');
 
 const books = [
@@ -35,7 +34,6 @@ const books = [
   {
     id: 4,
     name: 'Duna',
-    genre: 'Ficção Científica',
     author: {
       name: 'Frank Herbert',
       birthYear: 1920,
@@ -64,14 +62,24 @@ const books = [
   },
 ];
 
+const expected_result = {
+  author: {
+    birthYear: 1948,
+    name: 'George R. R. Martin'
+  },
+  genre: 'Fantasia',
+  id: 1,
+  name: 'As Crônicas de Gelo e Fogo',
+  releaseYear: 1991
+};
 
-function allNames() {
-  return books.reduce((result, item, index) => {
-    if (index < books.length - 1) return `${result} ${item.author.name},`;
-    return `${result} ${item.author.name}.`;
-  }, 'Nomes:');
+function longestNamedBook() {
+  return books.reduce((result, item) => {
+    if (result['name'].length < item['name'].length) return item;
+    return result;
+  });
 }
 
-// Crie uma string com os nomes de todas as pessoas autoras.
+// Encontre o livro com o maior nome.
 
-assert.deepEqual(allNames(), "Nomes: George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.");
+assert.deepEqual(longestNamedBook(), expected_result);
