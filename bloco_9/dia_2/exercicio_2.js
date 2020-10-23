@@ -18,12 +18,20 @@ const divide = (value) => {
   });
 };
 
+const sum = (arrValues) => {
+  return new Promise((resolve, reject) => {
+    resolve(arrValues.reduce((result, element) => parseFloat(result) + parseFloat(element)));
+  });
+};
+
 async function getResult() {
   try {
     const resultEx2 = await produceArr();
     console.log(resultEx2);
     const resultEx3 = await divide(resultEx2);
     console.log(resultEx3);
+    const resultEx5 = await sum(resultEx3);
+    console.log(resultEx5);
   } catch(err) {
     console.log(err);
   }
