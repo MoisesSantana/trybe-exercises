@@ -10,10 +10,20 @@ const produceArr = () => {
   });
 };
 
+const divide = (value) => {
+  return new Promise((resolve, reject) => {
+    const currentArr = [2,3,5,10];
+    currentArr.forEach((element, index) => currentArr[index] = (value / element).toFixed(2));
+    resolve(currentArr);
+  });
+};
+
 async function getResult() {
   try {
-    const result = await produceArr();
-    console.log(result)
+    const resultEx2 = await produceArr();
+    console.log(resultEx2);
+    const resultEx3 = await divide(resultEx2);
+    console.log(resultEx3);
   } catch(err) {
     console.log(err);
   }
