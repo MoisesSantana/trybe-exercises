@@ -1,4 +1,4 @@
-const { uppercase } = require('./functions.js');
+const { uppercase } = require('./function_01.js');
 
 describe('Exercise 01', () => {
   it('Shold return the message passed in argument in uppercase', (done) => {
