@@ -1,4 +1,3 @@
-const { it, expect } = require('@jest/globals');
 const { uppercase, getUserName, fetchResult, getListAnimals, getAnimalByName, getAnimalByAge } = require('./functions.js');
 
 describe('Exercise 01', () => {
