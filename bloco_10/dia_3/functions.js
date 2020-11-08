@@ -8,7 +8,7 @@ const firstLetter = (text) => text.charAt(0);
 
 const concat = (text1, text2) => `${text1} ${text2}`;
 
-const getFetch = (url) => fetch(url);
+const getFetch = (url) => fetch(url); 
 
 const getFetchResult = async () => {
   const jsonObject = await getFetch('https://dog.ceo/api/breeds/image/random');
