@@ -3,10 +3,10 @@ import CreateCard from './CreateCard.js';
 
 class CardList extends React.Component {
   render () {
-    const { pokemonsArr } = this.props;
+    const { cards } = this.props;
     return (
-      <div>
-        {pokemonsArr.map(pokemon => <CreateCard key={pokemon.id} infos={pokemon} />)}
+      <div className="AllCards">
+        {cards.map(pokemon => <CreateCard key={pokemon.id} infos={pokemon} />)}
       </div>
     );
   }
