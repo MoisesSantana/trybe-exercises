@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+}
+
+.AllCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  align-items: center;
+  background-color: rgb(220, 0, 4);
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  font-weight: 300;
+  justify-content: center;
+  line-height: 25px;
+  margin: 20px;
+  max-width: 100%;
+  min-width: 35%;
+  padding: 10px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+  white-space: nowrap;
+}
+
+.card a {
+  color: black;
+  transition: 0.5s;
+}
+
+.card a:hover {
+  color: white;
+}
+
+.card img {
+  background-color: white;
+  border-radius: 50px 0 5px 0;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+  margin-left: 20px;
+}
+
+footer {
+  background-color: rgb(94, 94, 94);
+  color: white;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 60%;
+}
+
+.socialMedia p {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.socialMedia a {
+  color: white;
+  margin-left: 5px;
+  text-decoration: none;
+}
+
+.socialMedia a:hover {
+  text-decoration: underline;
+}
