@@ -15,18 +15,12 @@ class App extends React.Component {
   fetchDogAPI() {
     this.setState({ loading: true }, async () => {
       const objectJSON = await fetch('https://dog.ceo/api/breeds/image/random');
-      const { message, status } = await objectJSON.json();
+      const { message } = await objectJSON.json();
   
-      if (status === 'success') {
-        return (
-          this.setState({
-            loading: false,
-            imageLink: message,
-          })
-        );
-      } else {
-        return 'ERRO'
-      }
+      this.setState({
+        loading: false,
+        imageLink: message,
+      });
     });
   }
 
@@ -34,11 +28,14 @@ class App extends React.Component {
     this.fetchDogAPI();
   }
 
-  /*
+  
   componentDidUpdate() {
-    this.fetchDogAPI();
+    const url = this.state.imageLink;
+    localStorage.setItem('lastDog', url);
+    const dogType = url.split('/');
+    if (dogType && !this.state.loading) alert(dogType[4]);
   }
-  */
+  
 
   shouldComponentUpdate(_nextProps, nextState) {
     const link = nextState.imageLink;
