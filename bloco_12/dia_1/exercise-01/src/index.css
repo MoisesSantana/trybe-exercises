@@ -36,3 +36,29 @@ body {
   height: 30px;
   width: 100%;
 }
+
+.type-buttons {
+  margin: auto;
+}
+
+.type-button {
+  background-color: yellow;
+  border: none;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 800;
+  height: 30px;
+  margin: 20px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+  width: 100px;
+}
+
+.type-button:hover {
+  background-color: rgb(204, 204, 0);
+  text-shadow: none;
+}
+
+.type-button:focus {
+  background-color: rgb(204, 204, 0);
+  text-shadow: none;
+}

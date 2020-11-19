@@ -1,6 +1,7 @@
 import React from 'react';
 import Pokemon from './Pokemon';
 import NextButton from './NextButton';
+import TypeButton from './TypeButton';
 
 class Pokedex extends React.Component {
     // criar um estado para armazenar o pokemon
@@ -12,12 +13,16 @@ class Pokedex extends React.Component {
 
     this.updatePokemonState = this.updatePokemonState.bind(this);
 
-    this.state = { pokemonState: 0 };
+    this.state = {
+      pokemonState: 0,
+      pokemonType: 'All',
+    };
   }
 
   updatePokemonState () {
-    const maxSize = this.props.pokemons.length;
-    console.log(maxSize)
+    const { pokemons } = this.props;
+    const maxSize = pokemons.length - 1;
+
     this.setState((previousState, _props) => {
       if (previousState.pokemonState < maxSize) {
         return { pokemonState: previousState.pokemonState + 1 };
@@ -27,12 +32,14 @@ class Pokedex extends React.Component {
   }
 
   render() {
+    const { pokemons } = this.props;
     return (
       <div className="pokedex">
-        {this.props.pokemons.filter(pokemon => pokemon === this.props.pokemons[this.state.pokemonState])
+        {pokemons.filter(pokemon => pokemon === pokemons[this.state.pokemonState])
         .map(pokemon => <Pokemon key={pokemon.id} pokemon={pokemon} />)}
 
         <NextButton next={this.updatePokemonState} />
+        <TypeButton type={this.updatePokemonState} />
       </div>
     );
   }
