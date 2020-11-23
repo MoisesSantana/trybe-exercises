@@ -2,17 +2,17 @@ import React from 'react';
 
 class TypeButton extends React.Component {
   render() {
-    const { type } = this.props;
+    const { filterByType } = this.props;
     return (
       <div className="type-buttons">
-        <button className="type-button">All</button>
-        <button className="type-button">Eletric</button>
-        <button className="type-button">Fire</button>
-        <button className="type-button">Bug</button>
-        <button className="type-button">Poison</button>
-        <button className="type-button">Psychic</button>
-        <button className="type-button">Normal</button>
-        <button className="type-button">Dragon</button>
+        <button className="type-button" onClick={filterByType}>All</button>
+        <button className="type-button" onClick={filterByType}>Electric</button>
+        <button className="type-button" onClick={filterByType}>Fire</button>
+        <button className="type-button" onClick={filterByType}>Bug</button>
+        <button className="type-button" onClick={filterByType}>Poison</button>
+        <button className="type-button" onClick={filterByType}>Psychic</button>
+        <button className="type-button" onClick={filterByType}>Normal</button>
+        <button className="type-button" onClick={filterByType}>Dragon</button>
       </div>
     );
   }

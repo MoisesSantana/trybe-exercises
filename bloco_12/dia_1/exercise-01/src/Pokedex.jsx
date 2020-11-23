@@ -4,23 +4,32 @@ import NextButton from './NextButton';
 import TypeButton from './TypeButton';
 
 class Pokedex extends React.Component {
-    // criar um estado para armazenar o pokemon
-    // fazer uma função para atualizar o estado
-    // this.props.pokemons.map precisa ter um filter, antes do map
-    // preciso comparar o valor do pokemon com o que está no state
   constructor (props) {
     super (props);
+    const { pokemons } = props; 
+    this.nextPokemon = this.nextPokemon.bind(this);
+    this.filterPokemons = this.filterPokemons.bind(this);
 
-    this.updatePokemonState = this.updatePokemonState.bind(this);
 
     this.state = {
       pokemonState: 0,
-      pokemonType: 'All',
+      pokemons,
     };
   }
 
-  updatePokemonState () {
+  filterPokemons ({ target }) {
     const { pokemons } = this.props;
+    const type = target.innerText;
+
+    const filteringPokemon = type === 'All' ? pokemons 
+      : pokemons.filter((pokemon) => pokemon.type.includes(type));
+
+    this.setState({ pokemons: filteringPokemon });
+  }
+
+  nextPokemon () {
+    const { pokemons } = this.state;
+
     const maxSize = pokemons.length - 1;
 
     this.setState((previousState, _props) => {
@@ -32,14 +41,14 @@ class Pokedex extends React.Component {
   }
 
   render() {
-    const { pokemons } = this.props;
+    const { pokemons } = this.state;
     return (
       <div className="pokedex">
         {pokemons.filter(pokemon => pokemon === pokemons[this.state.pokemonState])
         .map(pokemon => <Pokemon key={pokemon.id} pokemon={pokemon} />)}
 
-        <NextButton next={this.updatePokemonState} />
-        <TypeButton type={this.updatePokemonState} />
+        <NextButton next={this.nextPokemon} />
+        <TypeButton filterByType={this.filterPokemons} />
       </div>
     );
   }
