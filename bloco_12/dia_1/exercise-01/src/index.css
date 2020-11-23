@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pokemon {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1 1 auto;
+  min-width: 25%;
+  margin: 10px 10px;
+  border: 1px gray solid;
+  border-radius: 10px;
+}
+
+.pokedex {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 10px;
+}
+
+.next-button {
+  background-color: red;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-family: sans-serif;
+  font-size: 16pt;
+  font-weight: 600;
+  height: 30px;
+  width: 100%;
+}
+
+.type-buttons {
+  margin: auto;
+}
+
+.type-button {
+  background-color: yellow;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: 800;
+  height: 30px;
+  margin: 20px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+  width: 100px;
+}
+
+.type-button:hover {
+  background-color: rgb(204, 204, 0);
+  text-shadow: none;
+}
+
+.type-button:focus {
+  background-color: rgb(204, 204, 0);
+  text-shadow: none;
+}
