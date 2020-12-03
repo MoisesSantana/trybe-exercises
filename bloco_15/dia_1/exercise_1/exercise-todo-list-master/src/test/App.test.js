@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import App from '../App';
 
 describe('Testando a aplicação, testando input', () => {
@@ -36,5 +36,18 @@ describe('Exercise 01', () => {
     fireEvent.click(saveTaskButton);
 
     expect(getByText('valueOfInputTask')).toBeInTheDocument();
+  });
+
+  test('Text input read new task and Button add in list', () => {
+    render(<App />);
+
+    const tasksArr = ['teste1', 'teste2', 'teste3', 'teste4', 'teste5'];
+
+    const saveTaskButton = screen.getByText(/Adicionar/i);
+    const inputTask = screen.getByLabelText(/Tarefa/i);
+
+    tasksArr.forEach((task) => fireEvent.change(inputTask, { target: { value: task} }));
+
+    fireEvent.click(saveTaskButton);
   });
 }); 
