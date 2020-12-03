@@ -46,8 +46,16 @@ describe('Exercise 01', () => {
     const saveTaskButton = screen.getByText(/Adicionar/i);
     const inputTask = screen.getByLabelText(/Tarefa/i);
 
-    tasksArr.forEach((task) => fireEvent.change(inputTask, { target: { value: task} }));
+    tasksArr.forEach((task) => {
+      fireEvent.change(inputTask, { target: { value: task} });
+      fireEvent.click(saveTaskButton);
+    });
 
-    fireEvent.click(saveTaskButton);
+    tasksArr.forEach((task) => {
+      const currentTask = screen.getByText(task);
+
+      expect(currentTask).toBeInTheDocument();
+    })
+
   });
 }); 
