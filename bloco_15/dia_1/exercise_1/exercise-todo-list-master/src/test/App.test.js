@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import App from '../App';
 
 describe('Testando a aplicação, testando input', () => {
@@ -18,19 +18,19 @@ describe('Testando a aplicação, testando input', () => {
 
 describe('Exercise 01', () => {
   test('Button "Adicionar" exist', () => {
-    const { getByText } = render(<App />);
+    render(<App />);
 
-    const saveTaskButton = getByText('Adicionar');
+    const saveTaskButton = screen.getByText('Adicionar');
 
     expect(saveTaskButton).toBeInTheDocument();
     expect(saveTaskButton.type).toBe('button');
   });
 
   test('Button "Adicionar" save task', () => {
-    const { getByLabelText, getByText } = render(<App />);
+    render(<App />);
     
-    const saveTaskButton = getByText('Adicionar');
-    const inputTask = getByLabelText('Tarefa:')
+    const saveTaskButton = screen.getByText('Adicionar');
+    const inputTask = screen.getByLabelText('Tarefa:')
 
     fireEvent.change(inputTask, { target: {value: 'valueOfInputTask' } });
     fireEvent.click(saveTaskButton);
